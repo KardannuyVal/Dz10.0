@@ -15,9 +15,9 @@ namespace Apartment_Labrary
     }
     public class Apartment_1
     {
-        internal static int number_1;//уникальный номер квартиры
-        internal uint height_1;// высота здания
-        internal uint floor_1;//количество этажей
+        internal static int number_1;
+        internal uint height_1;
+        internal uint floor_1;
         internal double heig_floor_1;
         internal Color color_1;
         internal Apartment_1(uint height, uint floor, Color color)
