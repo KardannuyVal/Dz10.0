@@ -20,10 +20,6 @@ namespace Задачи
             this.number_of_part = number_of_part;
             this.draw = draw;
         }
-        /// <summary>
-        /// Метод, который записывает название мероприятия в файл : мероприятие
-        /// </summary>
-        /// <param name="events"></param>
         public void Inform_Event(Events events, string filePath)
         {
             using (StreamWriter writer = new StreamWriter(filePath))
