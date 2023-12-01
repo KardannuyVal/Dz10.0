@@ -7,7 +7,7 @@ namespace Задачи
         Учавствующий,
         Халявщик,
         Желающий
-    } // Занятость
+    } 
     internal class Student
     {
         internal string name {  get; set; }
