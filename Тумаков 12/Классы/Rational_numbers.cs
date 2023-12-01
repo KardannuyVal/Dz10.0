@@ -6,11 +6,6 @@ namespace Тумаков_12
     {
         private double numerator {  get; set; }
         private double denominator { get; set; }
-        /// <summary>
-        /// Конструктор рациональных чисел
-        /// </summary>
-        /// <param name="numerator"></param>
-        /// <param name="denominator"></param>
         public Rational_numbers(double numerator, double denominator)
         {
             if (denominator == 0)
@@ -27,11 +22,6 @@ namespace Тумаков_12
         {
             this.numerator = numerator;
         }
-        /// <summary>
-        /// Переопределённый метод Equals
-        /// </summary>
-        /// <param name="obj"></param>
-        /// <returns></returns>
         public override bool Equals(object obj)
         {
             if (obj is Rational_numbers number)
@@ -47,20 +37,10 @@ namespace Тумаков_12
             }
             return false;
         }
-        /// <summary>
-        /// Переопределённый метод GetHashCode
-        /// </summary>
-        /// <returns></returns>
         public override int GetHashCode()
         {
             return base.GetHashCode();
         }
-        /// <summary>
-        /// Переопределенные операторы == и !=
-        /// </summary>
-        /// <param name="number_1"></param>
-        /// <param name="number_2"></param>
-        /// <returns></returns>
         public static bool operator ==(Rational_numbers number_1, Rational_numbers number_2)
         {
             return number_1.Equals(number_2);
@@ -69,13 +49,6 @@ namespace Тумаков_12
         {
             return !number_1.Equals(number_2);
         }
-
-        /// <summary>
-        /// Переопределённые операторы < и >
-        /// </summary>
-        /// <param name="number_1"></param>
-        /// <param name="number_2"></param>
-        /// <returns></returns>
         public static bool operator <(Rational_numbers number_1, Rational_numbers number_2)
         {
             return (number_1.numerator / number_1.denominator < number_2.numerator / number_2.denominator);
@@ -84,13 +57,6 @@ namespace Тумаков_12
         {
             return (number_1.numerator / number_1.denominator > number_2.numerator / number_2.denominator);
         }
-
-        /// <summary>
-        /// Переопределённые операторы <= и >=
-        /// </summary>
-        /// <param name="number_1"></param>
-        /// <param name="number_2"></param>
-        /// <returns></returns>
         public static bool operator <=(Rational_numbers number_1, Rational_numbers number_2)
         {
             return (number_1.numerator / number_1.denominator <= number_2.numerator / number_2.denominator);
@@ -99,13 +65,6 @@ namespace Тумаков_12
         {
             return (number_1.numerator / number_1.denominator >= number_2.numerator / number_2.denominator);
         }
-
-        /// <summary>
-        /// Переопределённые операторы + - ++ -- * / %
-        /// </summary>
-        /// <param name="number_1"></param>
-        /// <param name="number_2"></param>
-        /// <returns></returns>
         public static Rational_numbers operator +(Rational_numbers number_1, Rational_numbers number_2)
         {
             return new Rational_numbers(number_1.numerator * number_2.denominator + number_2.numerator * number_1.denominator,
@@ -155,26 +114,16 @@ namespace Тумаков_12
                 return new Rational_numbers((number_1.numerator / number_1.denominator) % (number_2.numerator / number_2.denominator));
             }
         }
-        /// <summary>
-        /// Явное приведение в тип int
-        /// </summary>
-        /// <param name="number"></param>
         public static implicit operator int(Rational_numbers number)
         {
             return (int)(number.numerator / number.denominator);
         }
-        /// <summary>
-        /// Явное приведение в тип float
-        /// </summary>
-        /// <param name="number"></param>
+
         public static implicit operator float(Rational_numbers number)
         {
             return (float)(number.numerator / number.denominator);
         }
-        /// <summary>
-        /// Переопределённый метод ToString
-        /// </summary>
-        /// <returns></returns>
+     
         public override string ToString()
         {
             return $"Дробь {numerator} / {denominator}";
